@@ -17,6 +17,7 @@ public enum DBApplication {
     public DBState stateInit = new DBStateInit("Initializing");
     public DBState stateRun = new DBStateRunning("Running");
     public DBState stateStop = new DBStateStop("Stopped");
+
     public ArrayList<Table> tables = new ArrayList<>();
 
     public void start() {

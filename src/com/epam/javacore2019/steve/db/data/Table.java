@@ -16,6 +16,7 @@ public class Table {
         rows = new ArrayList<>();
     }
 
+
     public void load() {
         Utils.readFileLineByLine(metaData.getPathToData(), new DataHandler() {
             @Override
@@ -34,6 +35,15 @@ public class Table {
 
     public void addRow(TableRow row) {
         rows.add(row);
+    }
+
+
+    public List<TableRow> getRows() {
+        return rows;
+    }
+
+    public void setRows(List<TableRow> rows) {
+        this.rows = rows;
     }
 
     @Override

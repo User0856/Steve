@@ -1,13 +1,7 @@
 package com.epam.javacore2019.steve.db.server;
-import com.epam.javacore2019.steve.db.DBApplication;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.util.Arrays;
 
 import static com.sun.net.httpserver.HttpServer.create;
 
@@ -22,7 +16,9 @@ public enum DBServer {
 
 
 
-        server.createContext("/db/serverstate", new QueryHandler());
+        server.createContext("/db/serverstate", new StatusHandler());
+        server.createContext("/db/query", new QueryHandler());
+
         server.start();
 
         String message = String.format("Server is running on port: %d", server.getAddress().getPort());
