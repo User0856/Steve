@@ -1,5 +1,8 @@
 package com.epam.javacore2019.steve.db.dbstate;
 
+import com.epam.javacore2019.steve.db.DBApplication;
+import com.epam.javacore2019.steve.db.server.DBServer;
+
 public abstract class DBState {
 
     public String getName() {
@@ -27,7 +30,7 @@ public abstract class DBState {
     }
 
     public void exit() {
-        System.out.println("Basic exiting state");
+        System.out.println("Exiting state: " + DBApplication.INSTANCE.getStateName());
     }
 
     public void onStop() {

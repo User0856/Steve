@@ -16,7 +16,7 @@ public class DBStateInit extends DBState {
 
     @Override
     public void enter() {
-        System.out.println("Entering DBInit state");
+        System.out.println("Entering state: Stop");
         initTables();
 
         try{
@@ -35,6 +35,7 @@ public class DBStateInit extends DBState {
                 TableMetaData metaData = TableMetaData.loadFromFile(filePath);
                 Table table = new Table(metaData);
                 table.load();
+                DBApplication.INSTANCE.tables.add(table);
             }
         });
     }

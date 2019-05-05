@@ -11,7 +11,7 @@ public class DBStateRunning extends DBState {
 
     @Override
     public void enter() {
-        System.out.println("Entering DBRunning state");
+        System.out.println("Entering state: Running");
     }
 
     @Override

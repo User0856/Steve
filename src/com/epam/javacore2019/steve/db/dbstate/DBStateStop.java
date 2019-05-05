@@ -15,7 +15,7 @@ public class DBStateStop extends DBState {
 
     @Override
     public void enter() {
-        System.out.println("Entering DBStop state");
+        System.out.println("Entering state: Stop");
 
         List<String> list = new ArrayList<>();
         list.add("test string one");
