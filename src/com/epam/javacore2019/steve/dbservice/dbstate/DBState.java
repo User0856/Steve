@@ -1,7 +1,6 @@
-package com.epam.javacore2019.steve.db.dbstate;
+package com.epam.javacore2019.steve.dbservice.dbstate;
 
-import com.epam.javacore2019.steve.db.DBApplication;
-import com.epam.javacore2019.steve.db.server.DBServer;
+import com.epam.javacore2019.steve.dbservice.DBApplication;
 
 public abstract class DBState {
 

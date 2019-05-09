@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.db.data;
+package com.epam.javacore2019.steve.dbservice.data;
 
 public class TableColumn {
     private String name;

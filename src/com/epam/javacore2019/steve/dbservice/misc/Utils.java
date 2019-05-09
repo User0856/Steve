@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.db.misc;
+package com.epam.javacore2019.steve.dbservice.misc;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;

@@ -1,12 +1,10 @@
-package com.epam.javacore2019.steve.db.server;
+package com.epam.javacore2019.steve.dbservice.server;
 
-import com.epam.javacore2019.steve.db.DBApplication;
+import com.epam.javacore2019.steve.dbservice.DBApplication;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 import java.io.*;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
 import java.util.stream.Collectors;
 
 public class StatusHandler implements HttpHandler {

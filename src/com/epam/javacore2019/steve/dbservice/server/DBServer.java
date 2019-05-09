@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.db.server;
+package com.epam.javacore2019.steve.dbservice.server;
 import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;

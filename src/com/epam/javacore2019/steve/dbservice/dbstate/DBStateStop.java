@@ -1,7 +1,7 @@
-package com.epam.javacore2019.steve.db.dbstate;
+package com.epam.javacore2019.steve.dbservice.dbstate;
 
-import com.epam.javacore2019.steve.db.misc.DBConstants;
-import com.epam.javacore2019.steve.db.misc.Utils;
+import com.epam.javacore2019.steve.dbservice.misc.DBConstants;
+import com.epam.javacore2019.steve.dbservice.misc.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

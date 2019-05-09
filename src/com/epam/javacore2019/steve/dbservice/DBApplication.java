@@ -1,11 +1,11 @@
-package com.epam.javacore2019.steve.db;
+package com.epam.javacore2019.steve.dbservice;
 
-import com.epam.javacore2019.steve.db.data.QueryResult;
-import com.epam.javacore2019.steve.db.data.Table;
-import com.epam.javacore2019.steve.db.dbstate.DBState;
-import com.epam.javacore2019.steve.db.dbstate.DBStateInit;
-import com.epam.javacore2019.steve.db.dbstate.DBStateRunning;
-import com.epam.javacore2019.steve.db.dbstate.DBStateStop;
+import com.epam.javacore2019.steve.dbservice.data.QueryResult;
+import com.epam.javacore2019.steve.dbservice.data.Table;
+import com.epam.javacore2019.steve.dbservice.dbstate.DBState;
+import com.epam.javacore2019.steve.dbservice.dbstate.DBStateInit;
+import com.epam.javacore2019.steve.dbservice.dbstate.DBStateRunning;
+import com.epam.javacore2019.steve.dbservice.dbstate.DBStateStop;
 
 import java.util.ArrayList;
 

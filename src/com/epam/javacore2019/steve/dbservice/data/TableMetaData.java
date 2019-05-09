@@ -1,8 +1,8 @@
-package com.epam.javacore2019.steve.db.data;
+package com.epam.javacore2019.steve.dbservice.data;
 
-import com.epam.javacore2019.steve.db.misc.DataHandler;
-import com.epam.javacore2019.steve.db.misc.Utils;
-import com.epam.javacore2019.steve.db.misc.DBConstants;
+import com.epam.javacore2019.steve.dbservice.misc.DataHandler;
+import com.epam.javacore2019.steve.dbservice.misc.Utils;
+import com.epam.javacore2019.steve.dbservice.misc.DBConstants;
 
 import java.util.ArrayList;
 import java.util.List;
