@@ -1,16 +1,16 @@
 package com.epam.javacore2019.steve.appservice;
 
-import com.epam.javacore2019.steve.appservice.Command.ACommand;
-import com.epam.javacore2019.steve.appservice.Command.CommandRegistry;
-import com.epam.javacore2019.steve.appservice.profile.ProfileController;
-import com.epam.javacore2019.steve.appservice.state.ApplicationState;
+import com.epam.javacore2019.steve.appservice.command.ACommand;
+import com.epam.javacore2019.steve.appservice.command.CommandRegistry;
+import com.epam.javacore2019.steve.appservice.appstate.ApplicationState;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ServerApplication {
+public enum ServerApplication {
+    INSTNCE;
 
-    static public final  String APP_NAME = "Steve";
+    public static final String APP_NAME = "Steve";
     static public final String AUTHOR = "Aleksandr Lutkov";
     static public final String VERSION = "0.0.1";
 
@@ -26,10 +26,12 @@ public class ServerApplication {
 
     public static void main(String[] args) throws IOException {
 
-
         //AppServer.INSTANCE.start();
 
 
+    }
+
+    public void start(){
 
         Scanner sc = new Scanner(System.in);
         String name;
@@ -43,16 +45,7 @@ public class ServerApplication {
             }
         }
 
-
-
-
-        ProfileController profileController = new ProfileController();
-        profileController.showProfile(1);
-
-
-
     }
-
 
     public static void changeState(ApplicationState newState, String commandName){
         currentState.exit();

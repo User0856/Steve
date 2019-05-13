@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.appservice.Command;
+package com.epam.javacore2019.steve.appservice.command;
 
 import static com.epam.javacore2019.steve.appservice.ServerApplication.VERSION;
 

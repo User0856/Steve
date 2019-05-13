@@ -8,15 +8,16 @@ public class MainApplication {
 
     static private int count = 1;
     public static void main(String[] args) {
+
         DBApplication.INSTANCE.start();
 
-       /*
-               try {
+        try {
             WebClientApplication.INSTANCE.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+        ServerApplication.INSTNCE.start();
+
 
 
 
@@ -26,19 +27,21 @@ public class MainApplication {
 
 /*
 TODO
-- чтение из файлов data и structure
+
 - вывод в консоль по формату таблицы
 - вывод в таблицу только запроценных данных
 - шифрование данных (16, Цезарь)
+- what is %s %d ?
 
++ чтение из файлов data и structure
++ сделать сервер в стив аппликайшн
 
-- сделать сервер в стив аппликайшн
 
 
  add Handlers
  /criminals/1
  / api/showprofile/1
 
-what is %s %d
+
 
 */

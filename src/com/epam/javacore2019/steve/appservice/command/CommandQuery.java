@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.appservice.Command;
+package com.epam.javacore2019.steve.appservice.command;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.appservice.state;
+package com.epam.javacore2019.steve.appservice.appstate;
 
 import com.epam.javacore2019.steve.appservice.ServerApplication;
 

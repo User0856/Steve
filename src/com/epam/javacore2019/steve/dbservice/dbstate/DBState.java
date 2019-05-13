@@ -4,6 +4,8 @@ import com.epam.javacore2019.steve.dbservice.DBApplication;
 
 public abstract class DBState {
 
+    protected String name;
+
     public String getName() {
         return name;
     }
@@ -12,12 +14,9 @@ public abstract class DBState {
         this.name = name;
     }
 
-    protected String name;
-
     public DBState(String name){
         this.name = name;
     }
-
 
 
     public void enter() {
