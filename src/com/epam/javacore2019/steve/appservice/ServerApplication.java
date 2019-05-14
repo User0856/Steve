@@ -2,13 +2,15 @@ package com.epam.javacore2019.steve.appservice;
 
 import com.epam.javacore2019.steve.appservice.command.ACommand;
 import com.epam.javacore2019.steve.appservice.command.CommandRegistry;
-import com.epam.javacore2019.steve.appservice.appstate.ApplicationState;
+import com.epam.javacore2019.steve.appservice.appstate.AppState;
+import com.epam.javacore2019.steve.appservice.server.AppServer;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public enum ServerApplication {
-    INSTNCE;
+    INSTANCE;
+
 
     public static final String APP_NAME = "Steve";
     static public final String AUTHOR = "Aleksandr Lutkov";
@@ -20,18 +22,22 @@ public enum ServerApplication {
     public static final String FROM_GROUP = "(FROM)";
     public static final String TBL_GROUP = "([a-zA-Z]+)$";
 
-    static ApplicationState currentState;
+    static AppState currentState;
 
 
 
     public static void main(String[] args) throws IOException {
 
-        //AppServer.INSTANCE.start();
-
 
     }
 
     public void start(){
+
+        try {
+            AppServer.INSTANCE.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         Scanner sc = new Scanner(System.in);
         String name;
@@ -47,8 +53,14 @@ public enum ServerApplication {
 
     }
 
-    public static void changeState(ApplicationState newState, String commandName){
-        currentState.exit();
+    public static void changeState(AppState newState, String commandName){
+        if(currentState != null){
+            if(currentState.equals(newState)){
+                return;
+            } else {
+                currentState.exit();
+            }
+        }
         currentState = newState;
         currentState.enter(commandName);
     }

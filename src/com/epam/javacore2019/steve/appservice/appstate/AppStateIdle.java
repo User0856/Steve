@@ -1,6 +1,10 @@
 package com.epam.javacore2019.steve.appservice.appstate;
 
-public class StateIdle extends ApplicationState {
+public class AppStateIdle extends AppState {
+
+    public AppStateIdle(String name) {
+        super(name);
+    }
 
     public void onCommand(String name){
         System.out.println("on... " + name + " has to wait");

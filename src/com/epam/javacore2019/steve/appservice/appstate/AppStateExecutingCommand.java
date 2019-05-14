@@ -3,8 +3,12 @@ package com.epam.javacore2019.steve.appservice.appstate;
 import com.epam.javacore2019.steve.appservice.ServerApplication;
 
 
-public class StsteExecutingCommand extends ApplicationState {
+public class AppStateExecutingCommand extends AppState {
 
+
+    public AppStateExecutingCommand(String name) {
+        super(name);
+    }
 
     @Override
     public void enter(String commandName) {
@@ -31,7 +35,7 @@ public class StsteExecutingCommand extends ApplicationState {
     }
 
     private void executeCommmand(String commandName){
-        ServerApplication.changeState(new StateIdle(), "idle");
+ //       ServerApplication.changeState(new AppStateIdle(), "idle");
 
     }
 }

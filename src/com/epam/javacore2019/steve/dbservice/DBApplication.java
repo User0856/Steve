@@ -33,15 +33,15 @@ public enum DBApplication {
         return null;
     }
 
-    public void changeState(DBState state) {
+    public void changeState(DBState newState) {
         if (currentState != null) {
-            if (currentState.equals(state)) {
+            if (currentState.equals(newState)) {
                 return;
             } else {
                 currentState.exit();
             }
         }
-        currentState = state;
+        currentState = newState;
         currentState.enter();
     }
 

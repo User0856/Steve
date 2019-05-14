@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-public class CssHandler implements HttpHandler {
+public class JSHandler implements HttpHandler {
 
 
 
@@ -28,7 +28,7 @@ public class CssHandler implements HttpHandler {
         }
 
 
-        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"text/css"}));
+        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"application/javascript"}));
         exchange.sendResponseHeaders(200, 0);
 
         OutputStream os = exchange.getResponseBody();

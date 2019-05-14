@@ -16,7 +16,7 @@ public class MainApplication {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        ServerApplication.INSTNCE.start();
+        ServerApplication.INSTANCE.start();
 
 
 

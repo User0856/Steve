@@ -13,6 +13,7 @@ public enum AppServer {
     public void start() throws IOException {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 10);
+        server.createContext("/api/criminals", new CrminalsApiHandler()); //criminals/id
         server.start();
         String message = String.format("AppServer is running on port: %d", server.getAddress().getPort());
         System.out.println(message);

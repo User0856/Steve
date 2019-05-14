@@ -18,7 +18,11 @@ public enum WebClientApplication {
 
 
         server.createContext("/pages/", new HtmlHandler());
-        server.createContext("/static/css/", new CssHandler());
+        server.createContext("/css/", new CssHandler());
+        server.createContext("/js/", new JSHandler());
+        server.createContext("/api/testget", new ApiGetTestHandler());
+        server.createContext("/api/testpost", new ApiPostTestHandler());
+        server.createContext("/api/criminals", new ApiCriminalsHandler());
 
         server.start();
 
