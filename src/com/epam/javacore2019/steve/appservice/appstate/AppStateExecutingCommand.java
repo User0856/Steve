@@ -35,7 +35,7 @@ public class AppStateExecutingCommand extends AppState {
     }
 
     private void executeCommmand(String commandName){
- //       ServerApplication.changeState(new AppStateIdle(), "idle");
+        ServerApplication.changeState(new AppStateIdle(commandName), "idle");
 
     }
 }

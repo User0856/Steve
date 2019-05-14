@@ -46,7 +46,6 @@ public class StatusHandler implements HttpHandler {
         String request = br.lines().collect(Collectors.joining(System.lineSeparator()));
 
 
-
         if(request.equals("status")){
             String response = DBApplication.INSTANCE.getStateName();
             exchange.sendResponseHeaders(200, response.getBytes().length);
@@ -60,7 +59,6 @@ public class StatusHandler implements HttpHandler {
             os.write(response.getBytes());
             os.close();
         }
-
 
     }
 

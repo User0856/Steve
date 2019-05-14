@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.webservice;
+package com.epam.javacore2019.steve.webclient;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -8,9 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-public class HtmlHandler implements HttpHandler {
-
-    public static final String HTML_FORMAT = "^/pages/(([a-zA-Z]+\\.)(html))$";
+public class JSHandler implements HttpHandler {
 
 
 
@@ -19,26 +17,22 @@ public class HtmlHandler implements HttpHandler {
 
         String path = exchange.getRequestURI().getPath();
         String response = "";
-        if (path.matches(HTML_FORMAT)){
-            response = path;
-        } else{
-            response = "invalid URL: " + path;
-        }
 
-        File file = new File("webclient/" + path);
+        response = path;
+        File file = new File("webclient/static" + path);
         response +="\n File exists: " + file.exists();
 
         byte[] filebytes = null;
         if(file.exists()){
-            filebytes = Utils.readBytes("webclient/" + path);
+            filebytes = Utils.readBytes("webclient/static" + path);
         }
 
 
-        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"text/html"}));
+        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"application/javascript"}));
         exchange.sendResponseHeaders(200, 0);
 
         OutputStream os = exchange.getResponseBody();
-       // os.write(("Html Handler: " + response).getBytes());
+        // os.write(("Html Handler: " + response).getBytes());
 
         if(filebytes!=null){
             os.write(filebytes);
@@ -46,5 +40,7 @@ public class HtmlHandler implements HttpHandler {
 
 
         os.close();
+
+
     }
 }

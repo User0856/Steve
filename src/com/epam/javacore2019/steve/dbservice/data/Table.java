@@ -26,7 +26,7 @@ public class Table {
                 addRow(row);
             }
         });
-        System.out.println(this);
+//        System.out.println(this);
     }
 
     public void save() {

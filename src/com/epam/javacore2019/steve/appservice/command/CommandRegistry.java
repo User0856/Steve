@@ -12,13 +12,13 @@ public enum CommandRegistry {
 
     static {
         commands = new HashMap<>();
-        CommandAuthor commandAuthor = new CommandAuthor("author");
+   //     CommandAuthor commandAuthor = new CommandAuthor("author");
         commands.put("version", new CommandVersion("version"));
         commands.put("author", new CommandAuthor("author"));
         commands.put("creator", new CommandAuthor("author"));
         commands.put("father", new CommandAuthor("author"));
         commands.put("help", new CommandHelp("help"));
-        commands.put("status", new CommandDBStatus("database status"));
+        commands.put("database status", new CommandDBStatus("database status"));
         commands.put("query", new CommandQuery("database query"));
         commands.put("query: " + QUERY_NAME, new CommandQuery("database query"));
     }
@@ -28,14 +28,19 @@ public enum CommandRegistry {
     }
 
 
-    public void listCommands(){
+    public String listCommands(){
         Iterator it = commands.entrySet().iterator();
-        System.out.println("List of commmands:");
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("List of commmands:\n");
+
 
         while(it.hasNext()){
             Map.Entry entry = (Map.Entry)it.next();
-            System.out.println(entry.getKey());
+            builder.append(entry.getKey()+"\n");
         }
+
+        return builder.toString();
     }
 
     public boolean hasCommand(String name){

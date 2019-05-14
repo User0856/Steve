@@ -8,9 +8,11 @@ public abstract class ACommand {
         this.name = name;
     }
 
-    public void execute(){
-        System.out.println("Command \"" + name + "\" not implemented");
+    public String execute(){
+        return ("Command \"" + name + "\" not implemented");
     }
+
+
 
     public String getName() {
         return name;

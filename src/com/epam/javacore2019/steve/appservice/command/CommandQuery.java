@@ -21,7 +21,7 @@ public class CommandQuery extends ACommand{
     }
 
     @Override
-    public void execute() {
+    public String execute() {
 
         String query = super.getName();
 
@@ -65,6 +65,7 @@ public class CommandQuery extends ACommand{
             e.printStackTrace();
         }
 
+        return null;
 
 
 

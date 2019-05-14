@@ -6,7 +6,9 @@ public class CommandHelp  extends ACommand{
     }
 
     @Override
-    public void execute(){
-        CommandRegistry.INSTANCE.listCommands();
+    public String execute(){
+
+
+        return CommandRegistry.INSTANCE.listCommands();
     }
 }

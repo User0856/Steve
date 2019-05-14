@@ -16,7 +16,7 @@ public class CommandDBStatus extends ACommand{
     }
 
     @Override
-    public void execute() {
+    public String execute() {
 
         String outMsg = "status";
         URL url = null;
@@ -35,7 +35,7 @@ public class CommandDBStatus extends ACommand{
             BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String line;
             while ((line = br.readLine()) != null){
-                System.out.println("Database status is: " + line);
+                return ("Database status is: " + line);
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -46,7 +46,7 @@ public class CommandDBStatus extends ACommand{
         }
 
 
-
+        return "Database response error";
 
 
 

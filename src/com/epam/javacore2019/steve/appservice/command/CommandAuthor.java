@@ -8,7 +8,11 @@ public class CommandAuthor extends ACommand {
     }
 
     @Override
-    public void execute() {
-        System.out.println("My author is " + AUTHOR);
+    public String execute() {
+        //System.out.println("My author is " + AUTHOR);
+        return("My author is " + AUTHOR);
+
+
+
     }
 }

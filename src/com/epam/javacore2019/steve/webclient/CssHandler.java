@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.webservice;
+package com.epam.javacore2019.steve.webclient;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-public class JSHandler implements HttpHandler {
+public class CssHandler implements HttpHandler {
 
 
 
@@ -28,7 +28,7 @@ public class JSHandler implements HttpHandler {
         }
 
 
-        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"application/javascript"}));
+        exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"text/css"}));
         exchange.sendResponseHeaders(200, 0);
 
         OutputStream os = exchange.getResponseBody();

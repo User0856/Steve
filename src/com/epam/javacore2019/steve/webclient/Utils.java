@@ -1,4 +1,4 @@
-package com.epam.javacore2019.steve.webservice;
+package com.epam.javacore2019.steve.webclient;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

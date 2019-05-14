@@ -39,17 +39,7 @@ public enum ServerApplication {
             e.printStackTrace();
         }
 
-        Scanner sc = new Scanner(System.in);
-        String name;
-        while (sc.hasNext()){
-            name = sc.nextLine();
-            if(CommandRegistry.INSTANCE.hasCommand(name)){
-                ACommand command = CommandRegistry.INSTANCE.getCommand(name);
-                command.execute();
-            } else {
-                System.out.println("Command \"" + name + "\" not implemented");
-            }
-        }
+
 
     }
 
@@ -75,7 +65,7 @@ public enum ServerApplication {
 
 
 
-                public static final String ALLOWED_DOMAIN_NAMES = "^([a-zA-Z0-9]+\\.)+(com|de|ru)$";
+    public static final String ALLOWED_DOMAIN_NAMES = "^([a-zA-Z0-9]+\\.)+(com|de|ru)$";
     public static final String OP_GROUP = "^(SELECT|DELETE)";
     public static  final String FLD_GROUP = "([a-zA-Z, ]+)";
     public static final String SPACE = "([\\s]+)";
@@ -86,7 +76,7 @@ public enum ServerApplication {
 
 
 
-         String query = "SELECT id, firstName, lastName, FROM Criminals";
+        String query = "SELECT id, firstName, lastName, FROM Criminals";
 
         Pattern p = Pattern.compile(OP_GROUP + SPACE + FLD_GROUP + SPACE + FROM_GROUP + SPACE + TBL_GROUP);
         Matcher matcher = p.matcher(query);
@@ -94,6 +84,20 @@ public enum ServerApplication {
             System.out.println("Number of groups: " + matcher.groupCount());
             for (int i = 0, len = matcher.groupCount(); i <= len; i++) {
                 System.out.println(matcher.group(i));
+            }
+        }
+
+
+
+        Scanner sc = new Scanner(System.in);
+        String name;
+        while (sc.hasNext()){
+            name = sc.nextLine();
+            if(CommandRegistry.INSTANCE.hasCommand(name)){
+                ACommand command = CommandRegistry.INSTANCE.getCommand(name);
+                command.execute();
+            } else {
+                System.out.println("Command \"" + name + "\" not implemented");
             }
         }
 

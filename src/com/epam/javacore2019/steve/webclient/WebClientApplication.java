@@ -1,7 +1,5 @@
-package com.epam.javacore2019.steve.webservice;
+package com.epam.javacore2019.steve.webclient;
 
-import com.epam.javacore2019.steve.dbservice.server.QueryHandler;
-import com.epam.javacore2019.steve.dbservice.server.StatusHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;

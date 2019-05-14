@@ -14,6 +14,7 @@ public enum AppServer {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 10);
         server.createContext("/api/criminals", new CrminalsApiHandler()); //criminals/id
+        server.createContext("/api/consoleclient/request", new ConsoleClientRequestHandler());
         server.start();
         String message = String.format("AppServer is running on port: %d", server.getAddress().getPort());
         System.out.println(message);

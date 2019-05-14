@@ -8,7 +8,7 @@ public class CommandVersion extends ACommand {
     }
 
     @Override
-    public void execute() {
-        System.out.println("My version is " + VERSION);
+    public String execute() {
+        return ("My version is " + VERSION);
     }
 }

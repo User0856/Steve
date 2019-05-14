@@ -1,9 +1,8 @@
-package com.epam.javacore2019.steve.webservice;
+package com.epam.javacore2019.steve.webclient;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;

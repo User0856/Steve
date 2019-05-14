@@ -1,8 +1,9 @@
 package com.epam.javacore2019.steve;
 
 import com.epam.javacore2019.steve.appservice.ServerApplication;
+import com.epam.javacore2019.steve.consoleclient.ConsoleClientApplication;
 import com.epam.javacore2019.steve.dbservice.DBApplication;
-import com.epam.javacore2019.steve.webservice.WebClientApplication;
+import com.epam.javacore2019.steve.webclient.WebClientApplication;
 
 public class MainApplication {
 
@@ -10,13 +11,14 @@ public class MainApplication {
     public static void main(String[] args) {
 
         DBApplication.INSTANCE.start();
-
+        ServerApplication.INSTANCE.start();
         try {
             WebClientApplication.INSTANCE.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        ServerApplication.INSTANCE.start();
+        ConsoleClientApplication.INSTANCE.start();
+
 
 
 
