@@ -1,7 +1,11 @@
-body{
-background-color: darkseagreen;
-
+body {
+    background-color: darkslateblue;
+    font: bold 24px Verdana;
+    color : white;
+    padding: 40px;
+    text-align: center;
 }
+
 
 #server_response_section{
     height : 60px;

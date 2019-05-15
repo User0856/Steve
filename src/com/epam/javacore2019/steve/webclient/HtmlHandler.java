@@ -6,6 +6,8 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class HtmlHandler implements HttpHandler {
@@ -33,6 +35,9 @@ public class HtmlHandler implements HttpHandler {
             filebytes = Utils.readBytes("webclient/" + path);
         }
 
+        String result = new String(filebytes);
+        result = result.replace("{{time}}", LocalTime.now().format(DateTimeFormatter.ISO_TIME).toString());
+
 
         exchange.getRequestHeaders().put("Content-type", Arrays.asList(new String[]{"text/html"}));
         exchange.sendResponseHeaders(200, 0);
@@ -41,7 +46,7 @@ public class HtmlHandler implements HttpHandler {
        // os.write(("Html Handler: " + response).getBytes());
 
         if(filebytes!=null){
-            os.write(filebytes);
+            os.write(result.getBytes());
         }
 
 
